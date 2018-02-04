@@ -1,0 +1,112 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'Roboto Light';
+    src: url("../fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+/* Global styles */
+a {
+    text-decoration: none;
+}
+
+/* Header */
+.header {
+    width: 95%;
+    height: 60px;
+    margin: 10px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border: 1px solid #739E82;
+}
+
+/* Header: logo */
+.header > a.logo {
+    color: #2C5530;
+    font-size: 30px;
+    font-family: 'Roboto Light', serif;
+    line-height: 60px;
+}
+
+/* Header: navigation */
+.header ul {
+    list-style: none;
+}
+
+.header > ul.navigation {
+    float: right;
+    line-height: 58px;
+}
+
+.header > ul.navigation > li {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header > ul.navigation > li > a {
+    color: #99621E;
+    font-family: 'Roboto', serif;
+}
+
+.header > ul.navigation > li:hover {
+    background-color: #F2E2D2;
+}
+
+/* Header: navigation submenu */
+.header > ul.navigation > li:hover > ul.sub-nav {
+    visibility: visible;
+    opacity: 1;
+}
+
+.header > ul.navigation > li > ul.sub-nav {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    overflow: hidden;
+    max-width: 100%;
+    width: 110%;
+    line-height: 30px;
+    background-color: #F2E2D2;
+    border: 1px solid #739E82;
+    border-top: 0;
+    transition: all 250ms;
+}
+
+.header > ul.navigation > li > ul.sub-nav > li {
+    display: block;
+    text-align: center;
+}
+
+.header > ul.navigation > li > ul.sub-nav > li:hover {
+    background-color: #739E82;
+}
+
+.header > ul.navigation > li > ul.sub-nav > li:hover > a {
+    color: white;
+}
+
+.header > ul.navigation > li > ul.sub-nav > li > a {
+    color: #2C5530;
+}
+
+/* Content */
+.content {
+    width: 95%;
+    height: 200px;
+    margin: 0 auto;
+    overflow-y: scroll;
+    font-family: 'Roboto', serif;
+}
