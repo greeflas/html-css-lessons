@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Roboto Light';
+    src: url("../fonts/Roboto-Light.ttf");
+}
+
+/* First screen ========================== */
+.first-screen {
+    position: fixed;
+
+    width: 100%;
+
+    color: white;
+}
+
+.first-screen .bg-video {
+    width: 100%;
+}
+
+.first-screen .container {
+    position: absolute;
+    top: 26%;
+
+    width: 100%;
+}
+
+.first-screen .container .title {
+    width: 100%;
+
+    font-size: 80px;
+    font-family: 'Roboto', serif;
+    text-align: center;
+}
+
+.first-screen .container .line {
+    position: relative;
+
+    width: 100%;
+    margin: 20px 0;
+
+    text-align: center;
+}
+
+.first-screen .container .line > hr {
+    width: 60%;
+    display: inline-block;
+}
+
+.first-screen .container .line > hr::before,
+.first-screen .container .line > hr::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+
+    display: block;
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+    background-color: white;
+}
+
+.first-screen .container .line > hr::before {
+    left: 19%;
+}
+
+.first-screen .container .line > hr::after {
+    right: 19%;
+}
+
+.first-screen .container .description {
+padding: 0 10%;
+
+    font-family: 'Roboto Light', serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.first-screen .container .read-more {
+    display: block;
+    width: 112px;
+    height: 20px;
+    margin: 60px auto;
+
+    color: white;
+    font-family: 'Roboto', serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* Content ============================== */
+.content {
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+
+    width: 100%;
+    padding: 20px 80px;
+    box-sizing: border-box;
+
+    background-color: white;
+}
+
+.content .title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    font-family: 'Roboto', serif;
+    font-size: 40px;
+}
+
+.content .article-part {
+    font-family: 'Roboto Light', serif;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: justify;
+}
