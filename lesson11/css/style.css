@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Good-Vibe';
+    src: url("../fonts/Good-Vibe.ttf");
+}
+
+/* Global ======================== */
+a {
+    text-decoration: none;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.logo {
+    color: hotpink;
+    font-family: 'Good-Vibe', serif;
+}
+
+/* Header ======================== */
+header {
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    padding-top: 40px;
+
+    background-image: url("../img/bg.jpg");
+    background-size: 400px;
+}
+
+header::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, .5);
+}
+
+header .logo {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+
+    width: 308px;
+    margin: 0 auto 10px auto;
+
+    font-size: 60px;
+    text-shadow: 3px 3px 0 black;
+
+    animation: logo 1.2s;
+}
+
+@keyframes logo {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(3);
+    }
+    45% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(3);
+    }
+    87% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(4);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    header .logo {
+        font-size: 48px;
+        text-align: center;
+    }
+}
+
+header nav.menu {
+    position: relative;
+    z-index: 1;
+
+    height: 60px;
+}
+
+header nav.menu > ul {
+    list-style: none;
+    line-height: 60px;
+    text-align: center;
+}
+
+header nav.menu > ul > li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+header nav.menu > ul > li > a {
+    display: block;
+
+    color: deeppink;
+    font-family: Arial, serif;
+
+    transition: all 200ms;
+}
+
+header nav.menu > ul > li > a:hover {
+    color: violet;
+    transform: scale(1.1);
+}
+
+/* Content ==================== */
+main {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    margin: 170px auto 66px auto;
+    padding: 20px 20%;
+
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .8);
+}
+
+main::after {
+    content: "";
+
+    position: absolute;
+    top: 40%;
+    right: 4%;
+
+    display: block;
+    width: 120px;
+    height: 120px;
+
+    background: white url("../img/fuck-police-graffiti.png") no-repeat;
+    background-size: contain;
+
+    transform: rotate(30deg);
+}
+
+@media screen and (max-width: 870px) {
+    main::after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 20px 10%;
+    }
+}
+
+@media screen and (max-width: 320px ){
+      main {
+        padding: 20px 10px;
+    }
+
+}
+
+main section.about > article .article-title {
+    margin-bottom: 20px;
+
+    font-family: Arial, serif;
+    font-size: 26px;
+}
+
+@media screen and (max-width: 320px) {
+    main section.about > article .article-title {
+        text-align: center;
+    }
+}
+
+main section.about > article .article-text {
+    line-height: 24px;
+    font-family: Arial, serif;
+    font-size: 18px;
+    text-align: justify;
+}
+
+main section.about > article > iframe {
+    display: block;
+    width: 100%;
+    height: 400px;
+    margin: 20px auto;
+
+    border: 0;
+}
+
+@media screen and (max-width: 320px) {
+    main section.about > article > iframe {
+        height: 200px;
+    }
+}
+
+main section.stuff {
+    width: 100%;
+    margin-top: 20px;
+}
+
+main section.stuff .title {
+    margin-bottom: 20px;
+
+    font-family: Arial, serif;
+}
+
+main section.stuff .stuff-info {
+    position: relative;
+    float: left;
+
+    width: 30%;
+    height: 240px;
+    margin: 0 1%;
+    padding: 10px 8px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    font-family: Arial, serif;
+    text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    main section.stuff .stuff-info {
+        float: none;
+
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+main section.stuff .stuff-info .title {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    main section.stuff .stuff-info .title {
+        margin-bottom: 0;
+
+        text-align: left;
+    }
+
+    main section.stuff .stuff-info .description {
+        text-align: left;
+    }
+}
+
+main section.stuff .stuff-info .buy {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    left: 0;
+
+    display: block;
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+
+    background-color: hotpink;
+    border-radius: 5px;
+
+    color: white;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+main section.stuff .stuff-info .buy:hover {
+    background-color: deeppink;
+}
+
+@media screen and (max-width: 992px) {
+    main section.stuff .stuff-info .buy {
+        position: initial;
+        float: right;
+
+        margin: 0 6px;
+    }
+}
+
+/* Footer ===================== */
+footer {
+    position: fixed;
+    bottom: 0;
+
+    width: 100%;
+    padding: 20px 0;
+
+    background-color: #ccc;
+}
+
+footer .copyright {
+    color: #333;
+    font-family: Arial, serif;
+    text-align: center;
+}
+
+footer .copyright .logo {
+    color: #333;
+    font-size: 24px;
+}
+
+footer .copyright .logo:hover {
+    color: hotpink;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
