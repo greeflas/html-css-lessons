@@ -1,0 +1,7 @@
+.form-login {
+    margin-top: 100px;
+}
+
+.form-login button[type="submit"] {
+    width: 150px;
+}
